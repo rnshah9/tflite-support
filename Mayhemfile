@@ -1,0 +1,6 @@
+project: tflite-support
+target: bert-question-answerer-demo
+testsuite:
+  - file://tensorflow_lite_support/cc/test/testdata/task/text/regex_searcher.tflite
+cmds:
+  - cmd: /repo/bazel-bin/tensorflow_lite_support/examples/task/text/desktop/bert_question_answerer_demo --model_path @@ --question a --context a
