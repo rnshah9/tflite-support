@@ -12,13 +12,10 @@ objc_library(
         "sources/TFLAudioRecord.h",
     ],
     module_name = "TFLAudioRecord",
-    sdk_frameworks = ["AVFoundation"],
     deps = [
         "//tensorflow_lite_support/ios:TFLCommonUtils",
         "//tensorflow_lite_support/ios/task/audio/core:TFLAudioFormat",
         "//tensorflow_lite_support/ios/task/audio/core:TFLFloatBuffer",
         "//tensorflow_lite_support/ios/task/audio/core:TFLRingBuffer",
-        "//third_party/apple_frameworks:AVFoundation",
-        "//third_party/apple_frameworks:Foundation",
     ],
 )

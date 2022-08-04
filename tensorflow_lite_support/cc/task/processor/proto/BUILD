@@ -242,3 +242,62 @@ support_py_proto_library(
     api_version = 2,
     proto_deps = [":search_result_proto"],
 )
+
+proto_library(
+    name = "clu_annotation_options_proto",
+    srcs = ["clu_annotation_options.proto"],
+)
+
+cc_proto_library(
+    name = "clu_annotation_options_cc_proto",
+    deps = [":clu_annotation_options_proto"],
+)
+
+support_py_proto_library(
+    name = "clu_annotation_options_py_pb2",
+    srcs = ["clu_annotation_options.proto"],
+    api_version = 2,
+    proto_deps = [":clu_annotation_options_proto"],
+)
+
+proto_library(
+    name = "clu_proto",
+    srcs = ["clu.proto"],
+    deps = [
+        ":class_proto",
+    ],
+)
+
+cc_proto_library(
+    name = "clu_cc_proto",
+    deps = [":clu_proto"],
+)
+
+support_py_proto_library(
+    name = "clu_py_pb2",
+    srcs = ["clu.proto"],
+    api_version = 2,
+    proto_deps = [":clu_proto"],
+    py_proto_deps = [
+        ":class_py_pb2",
+    ],
+)
+
+proto_library(
+    name = "qa_answers_proto",
+    srcs = ["qa_answers.proto"],
+)
+
+cc_proto_library(
+    name = "qa_answers_cc_proto",
+    deps = [
+        ":qa_answers_proto",
+    ],
+)
+
+support_py_proto_library(
+    name = "qa_answers_py_pb2",
+    srcs = ["qa_answers.proto"],
+    api_version = 2,
+    proto_deps = [":qa_answers_proto"],
+)

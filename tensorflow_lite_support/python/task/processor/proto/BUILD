@@ -25,6 +25,15 @@ py_library(
 )
 
 py_library(
+    name = "qa_answers_pb2",
+    srcs = ["qa_answers_pb2.py"],
+    deps = [
+        "//tensorflow_lite_support/cc/task/processor/proto:qa_answers_py_pb2",
+        "//tensorflow_lite_support/python/task/core:optional_dependencies",
+    ],
+)
+
+py_library(
     name = "bounding_box_pb2",
     srcs = ["bounding_box_pb2.py"],
     deps = [
@@ -114,6 +123,25 @@ py_library(
     srcs = ["search_result_pb2.py"],
     deps = [
         "//tensorflow_lite_support/cc/task/processor/proto:search_result_py_pb2",
+        "//tensorflow_lite_support/python/task/core:optional_dependencies",
+    ],
+)
+
+py_library(
+    name = "clu_annotation_options_pb2",
+    srcs = ["clu_annotation_options_pb2.py"],
+    deps = [
+        "//tensorflow_lite_support/cc/task/processor/proto:clu_annotation_options_py_pb2",
+        "//tensorflow_lite_support/python/task/core:optional_dependencies",
+    ],
+)
+
+py_library(
+    name = "clu_pb2",
+    srcs = ["clu_pb2.py"],
+    deps = [
+        ":class_pb2",
+        "//tensorflow_lite_support/cc/task/processor/proto:clu_py_pb2",
         "//tensorflow_lite_support/python/task/core:optional_dependencies",
     ],
 )

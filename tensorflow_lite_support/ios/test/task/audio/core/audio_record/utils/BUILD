@@ -12,9 +12,8 @@ objc_library(
         "sources/AVAudioPCMBuffer+Utils.h",
     ],
     module_name = "AVAudioPCMBufferUtils",
-    sdk_frameworks = ["AVFoundation"],
     deps = [
-        "//third_party/apple_frameworks:AVFoundation",
-        "//third_party/apple_frameworks:Foundation",
+        "//tensorflow_lite_support/ios/task/audio/core:TFLAudioFormat",
+        "//tensorflow_lite_support/ios/task/audio/core:TFLFloatBuffer",
     ],
 )
